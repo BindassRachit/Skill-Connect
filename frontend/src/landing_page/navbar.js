@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Container, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 // import { FaSearch } from "react-icons/fa"; // 🔍 Import Search Icon
 
 const NavbarComponent = () => {
@@ -7,15 +8,15 @@ const NavbarComponent = () => {
     <Navbar bg="light" expand="lg" className="shadow-sm">
       <Container fluid>
         {/* Logo */}
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="/">
           <img
-            src="https://via.placeholder.com/40"
+            src="/media/images/skillConnect_logo.jpg"
             width="40"
             height="40"
             className="d-inline-block align-top me-2"
             alt="Logo"
           />
-          MyCompany
+          Skill Connect
         </Navbar.Brand>
 
         {/* Toggle for mobile */}
@@ -25,9 +26,9 @@ const NavbarComponent = () => {
         <Navbar.Collapse id="navbarScroll">
           {/* Left Navigation Items */}
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            <Nav.Link href="#dashboard">Dashboard</Nav.Link>
-            <Nav.Link href="#xyz">XYZ</Nav.Link>
-            <Nav.Link href="#find-job">Find a Job</Nav.Link>
+            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+            <Nav.Link href="/xyz">XYZ</Nav.Link>
+            <Nav.Link href="/find-job">Find a Job</Nav.Link>
           </Nav>
 
           {/* Search Bar */}
@@ -44,8 +45,8 @@ const NavbarComponent = () => {
 
           {/* Auth Buttons */}
           <div className="d-flex">
-            <Button variant="outline-primary" className="me-2">Login</Button>
-            <Button variant="primary">Sign Up</Button>
+            <Button as={Link} to="/login" variant="outline-primary" className="me-2">Login</Button>
+            <Button as={Link} to="/signup" variant="primary">Sign Up</Button>
           </div>
         </Navbar.Collapse>
       </Container>

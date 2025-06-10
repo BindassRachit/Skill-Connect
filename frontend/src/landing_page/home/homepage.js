@@ -1,16 +1,13 @@
-import Navbar from '../navbar';
-// import Footer from '../footer';
+import LandingPage from './main_section';
 import PopularServicesSlider from './service_slider';
 
 function HomePage() {
     return(
         <>
-            <Navbar />
-            <div>
+            <LandingPage />
+            <div style={{ backgroundColor: '#EFEFF7' }}>
             <PopularServicesSlider />
             </div>
-                
-            {/* <Footer /> */}
         </>
     )
 }

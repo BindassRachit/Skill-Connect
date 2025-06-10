@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
 const services = [
-  { title: "Website Development", color: "bg-success", image: "🖥️" },
-  { title: "Video Editing", color: "bg-pink", image: "🎬" },
-  { title: "Software Development", color: "bg-warning", image: "💻" },
-  { title: "SEO", color: "bg-success", image: "📈" },
-  { title: "Architecture & Interior Design", color: "bg-pink", image: "🏠" },
-  { title: "Book Design", color: "bg-lime", image: "📘" },
+  { title: "Website <br/> Development", color: "bg-success", image: "/media/ServiceSlider/Website-development.webp" },
+  { title: "Video Editing", color: "bg-danger", image: "/media/ServiceSlider/video-editing.webp" },
+  { title: "Software Development", color: "bg-warning", image: "/media/ServiceSlider/software-development.webp" },
+  { title: "SEO", color: "bg-success", image: "/media/ServiceSlider/seo.webp" },
+  { title: "Architecture & Interior Design", color: "bg-danger", image: "/media/ServiceSlider/architecture-design.webp" },
+  { title: "Book Design", color: "bg-danger", image: "/media/ServiceSlider/Book Design.webp" },
 ];
 
 export default function PopularServicesSlider() {
@@ -92,18 +92,29 @@ export default function PopularServicesSlider() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className={`d-flex flex-column justify-content-center align-items-center rounded-3 shadow p-3 text-white text-center ${service.color}`}
+              className={`d-flex flex-column justify-content-between align-items-center rounded-3 shadow p-3 text-white text-center ${service.color}`}
               whileHover={{ scale: 1.05 }}
               style={{
-                minWidth: isMobile ? "80%" : "250px",
+                minWidth: isMobile ? "60%" : "220px",
                 maxWidth: "220px",
                 height: isMobile ? "240px" : "280px",
               }}
             >
-              <div className="mb-2" style={{ fontSize: "3rem" }}>
-                {service.image}
+              <h3 
+                className="h6 font-weight-bold"
+                dangerouslySetInnerHTML={{ __html: service.title }}
+              ></h3>
+              <div className="mt-auto" style={{ fontSize: "3rem" }}>
+                {service.image.endsWith(".webp") ? (
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    style={{ width: "100%", height: "200px", objectFit: "contain", }}
+                  />
+                ) : ( 
+                  service.image
+                )}
               </div>
-              <h3 className="h6 font-weight-bold">{service.title}</h3>
             </motion.div>
           ))}
         </div>
