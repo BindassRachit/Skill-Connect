@@ -27,7 +27,7 @@ const NavbarComponent = () => {
           {/* Left Navigation Items */}
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
             <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-            <Nav.Link href="/xyz">XYZ</Nav.Link>
+            <Nav.Link href="/service">Service</Nav.Link>
             <Nav.Link href="/find-job">Find a Job</Nav.Link>
           </Nav>
 
