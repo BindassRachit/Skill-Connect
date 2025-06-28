@@ -28,7 +28,7 @@ const NavbarComponent = () => {
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
             <Nav.Link href="/dashboard">Dashboard</Nav.Link>
             <Nav.Link href="/service">Service</Nav.Link>
-            <Nav.Link href="/find-job">Find a Job</Nav.Link>
+            <Nav.Link href="/project">Projects</Nav.Link>
           </Nav>
 
           {/* Search Bar */}

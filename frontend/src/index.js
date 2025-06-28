@@ -8,6 +8,7 @@ import Login from './landing_page/login/login';
 import Signup from './landing_page/signup/signup';
 import Navbar from "./landing_page/navbar"
 import Footer from "./landing_page/footer"
+import Project from './landing_page/Project/project';
 import NotFound from './landing_page/notfound';
 
 // In your main JS file
@@ -25,6 +26,7 @@ root.render(
     <Route path='/login' element={<Login/>}/>
     <Route path='/signup' element={<Signup/>}/>
     <Route path='/home' element={<HomePage/>}/>
+    <Route path='/project' element={<Project/>}/>
     <Route path="*" element={<NotFound />} />
   </Routes>
   <Footer/>

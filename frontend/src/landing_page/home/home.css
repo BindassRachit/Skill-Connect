@@ -7,3 +7,42 @@
     background: linear-gradient(to bottom right, #187bff, #6ec6ff);
   }
   
+
+/* ai draft section */
+.ai-draft-wrapper {
+  background: linear-gradient(120deg, #c2e9fb, #81a4fd); /* sky blue to soft violet-blue */
+  border-radius: 25px;
+  color: #001d3d; /* dark blue text */
+}
+
+.ai-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: #ffffff; /* white card */
+  color: #000000; /* black text */
+}
+
+.typing-box {
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+  background-color: #f1faff;
+  color: #222;
+  border: 1px solid #cde3f6;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: #0077b6; /* sky blue cursor */
+  animation: blink 0.8s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ai draft section end */
